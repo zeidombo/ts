@@ -1,0 +1,88 @@
+---
+title: Language Type Hierarchy
+description: Type System for Programming Language
+repository: caslabs/jeraldy.com
+url: https://jeraldy.com
+date: 2024-01-01
+published: true
+---
+
+## First Generation
+A first-generation language (1GL) is machine code consisting of a big pile of 0s and 1s. Originally this code was entered into a computer via switches on the front of the hardware. You would flip a bunch of switches up and down and then press some sort of Enter button to load the corresponding com- mand into the computer. Then you would do it again. And again. As you can imagine, this was incredibly tedious.
+
+    ```
+
+      00001110 00011111 10111010 00001110 00000000 10110100 00001001 11001101
+      00100001 10111000 00000001
+    ```
+
+## Second Generation
+
+A second-generation language (2GL) is an assembly language. These are very closely related to the machine language commands, but in a more human “friendly” form.
+
+    ```assembly
+        LOAD 0x0A
+        STORE 0x0B
+        ADD 0x0C
+        SUB 0x0D
+        JUMP 0x0E
+        JUMP_IF_ZERO 0x0F
+        JUMP_IF_NEGATIVE 0x10
+        HALT
+    ```
+
+## Third Generation
+
+A third-generation language (3GL) works at a much higher level than 1GLs and 2GLs. These tend to be more machine-independent and much easier for humans to understand. This group includes most of the languages that you’ve probably seen before, such as BASIC, C, C++, COBOL, Fortran, Java, Pascal, and so forth.
+
+```
+    // Performing matrix multiplication
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 3; k++) {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+```
+
+## Fourth Generation
+
+A fourth-generation language (4GL) provides a higher level of abstraction than a 3GL. To provide that abstraction, these languages tend to be more specialized, focusing on a particular domain. Their general flavor is to focus on collections of data rather than individual pieces.
+
+```
+    SELECT * FROM Customers WHERE Country='France';
+```
+
+## Fifth Generation
+
+A fifth-generation language (5GL) solves problems by using rules and constraints rather than by following an algorithm given to it by a programmer. In the original 5GL vision, you wouldn’t need a programmer to solve problems. You would say something like, “Optimize next year’s profits,” add a bunch of rules covering the things that the computer is allowed to do with your company, and then wait for the program to spit out a solution.
+Unfortunately, even in a tightly constrained problem space, finding efficient algorithms for solving these sorts of problems turned out to be much harder than people expected. For that reason, 5GLs are used mainly in artificial intelligence research where it’s just not possible to solve problems in any other way.
+
+```
+    (defrule find-employee
+        (employee (name ?name) (salary ?salary))
+        (test (> ?salary 100000))
+        =>
+        (printout t ?name " makes more than $100,000." crlf))
+```
+
+## Sixth Generation
+
+The sixth generation isn't properly defined, and still a generation in progress. Though, there exist numerous proposals and possibilites of What 6GL can comrpise of. The first approach is to switch from writing textual code to drawing some other kind of code such as a flowchart
+For example, MIT’s Scratch lets you build a program by snapping together programming constructs such as loops, output statements, and methods.  but they don’t really increase the level of abstraction beyond 3GLs. The second approach people seem to take is to glue some sort of natural language processing or speech processing on top of a 3GL. The practical result (at least for now) is something like spoken or written SQL, which decreases the hard entry for accessbility in programming, but it doesn’t increase the level of abstraction.
+NLC (natural language coding) xtend the development environment to suggest pieces of code that you can manually accept, reject, or modify. These seem more like fancy code snippet managers than languages that truly increase the level of abstraction. They may be able to help flesh out some details in your code, but you still need to understand the code that they suggest.
+Perhaps a system with speech recognition (for easy use) and a super-generalized knowledge base so it can do just about anything reasonable that you can describe in plain English, like the brains in the replicants in Blade Runner.
+
+```
+// Example of a command in a speculative 6GL environment:
+"Computer, analyze the latest sales data, identify trends, and generate a comprehensive report comparing this quarter's performance with the last two years. Highlight any significant deviations and provide predictive analysis for the next quarter."
+
+// In a 6GL environment, such a command might automatically:
+// 1. Access the required sales data from relevant databases.
+// 2. Use advanced AI algorithms to analyze trends and patterns.
+// 3. Compare current data with historical data.
+// 4. Identify significant deviations and their potential causes.
+// 5. Predict future trends based on current data.
+// 6. Compile all these findings into a comprehensive report.
+```
